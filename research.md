@@ -37,11 +37,7 @@ Format for a real entry:
 - **Infinite Iterated Function Systems:** Limit sets and attractors of IIFS. Work done under Ariel Rapaport. [[pdf]]({{ '/assets/files/IIFS.pdf' | relative_url }})
 
 ## Projects
-A variety of projects in machine learning and computational biology.
-
-<!--
-- **Hessian spectra and posterior collapse in deep VAEs** — A negative result in two-regimes that a bulk + outlier in the loss Hessian could predict posterior collapse. Blog post to be written.
--->
+A variety of projects in machine learning and computational biology.Devised and ran a novel experiment chaining explainer models to explain each other, demonstrating that "explaining ability" converges to a stable fixed point after a few iterations — an original extension beyond the source paper
 
 - **[Model Introspection](https://github.com/oakleafwarrior/introspection_replication)** I replicated results from this [paper](https://arxiv.org/pdf/2511.08579). I LoRA poost trained Qwen3 family of models to explain their responses on input ablation and activation patching experiments. High-order explainer models (those trained to explain previous explainer models), stabilize on evaluation metrics, but are worse at explaining the original model. Explainer models trained from smaller/quantized base models perform worse than those postrained from the target model on input ablation explanations, and perform similarly well on activation patching explanations in a small training run regime. Experiment yourself on the notebooks: [![Small Explainer Replication](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/oakleafwarrior/introspection_replication/blob/main/replication.ipynb), [![Iteration Experiment](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/oakleafwarrior/introspection_replication/blob/main/iteration.ipynb).
 

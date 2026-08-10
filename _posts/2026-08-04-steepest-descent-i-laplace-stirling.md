@@ -114,13 +114,13 @@ $$
 \end{align}
 $$
 
-The figure below shows this split and the two scales that make it work.
+<!-- The figure below shows this split and the two scales that make it work.
 
 {% include figure.html
    src="/assets/img/posts/steepest-descent/fig02-laplace-split.png"
    caption="The decomposition of the integral. The left shows each window. $I_1$ in $[1-\vep,1+\vep]$ and carrying the mass is shaded while the tails $I_2,I_3$ are in grey. The exponent $\vep=n^{-2/5}$ is chosen to sit between the two scales. The cubic error $nO(\vep^3)=O(n^{-1/5})$ decays, but $\vep$ outpaces the Gaussian width of $n^{-1/2}$. On the right, after the substitution $y=1+z\sqrt{n}$, the window becomes $\vert z \vert<n^{1/10}$, which has growth just fast enough to make the tail negligble. Claude generated picture."
    alt="Two panels: the split of the Laplace integral into center and tail regions at n=40, and the same window rescaled to show the Gaussian profile."
-   width="95%" %}
+   width="95%" %} -->
 
 The first term, under the substitution  $y = 1 + \frac{z}{\sqrt{n}}$ is
 
