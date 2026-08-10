@@ -21,6 +21,15 @@ $$
 
 The complication is that $\gamma$ is now a contour we have to choose. On a bad contour, $e^{nf(z)}$ oscillates instead of decaying, and Laplace's argument falls apart. The method is called "steepest descent" because we choose a contour such that $\Re f$ decreases as fast as possible away from $z_0$ and does not oscillate. We take $\gamma$ through the critical point $z_0$ along the direction where $\Im f$ stays constant so there is no oscillation and $\Re f$ decays. We will prove the local central limit theorem using steepest descent and walk through the construction of such a contour.
 
+So, the steps are similar to those in [Steepest Descent I]({% post_url 2026-08-04-steepest-descent-i-laplace-stirling %}), but with the addition of choosing a contour. 
+
+1. Express the desired formula as an integral.
+2. Find an adequate $f$ to to transform the integrand into $\exp(nf(z))$.
+3. Find an appropriate contour.
+4. Localize near the critical point of $f$ with only $o(1)$ loss.
+5. Bound the tails.
+
+
 ## Local CLT for Binomial Random Variables
 
 **Theorem (Local Central Limit Theorem).** Let $p \in (0,1)$ and $x \in \RR$. For $n \in \ZZ_+$, let $k$ be the nearest integer to $pn + x\sqrt{n}$. Then
@@ -36,7 +45,7 @@ This theorem predates the more familiar Central Limit Theorem — De Moivre prov
 
 **Proof.**
 
-**Step 1: Set up the integral.**
+**Step 1:**
 We observe that $p^k(1-p)^{n-k}{n \choose k}$ is the coefficient of $z^k$ in
 
 $$
@@ -60,7 +69,7 @@ $$
 
 where $f(z) = \log(pz + (1 - p)) - p \log(z)$. We'll treat $z^{np-k-1}$ separately — its exponent grows only like $O(\sqrt{n})$, far slower than the $nf(z)$ term that will dominate everything.
 
-**Step 2: Find the critical point.**
+**Step 2:**
 As with Laplace's method, we want to localize near a critical point of $f$. But we're now integrating over a closed contour in $\CC$ rather than an interval in $\RR$, so we also have to *choose* that contour, and worry about the geometry and oscillation of the integrand along it. We first fix a branch of $\log$: cut along the negative real axis, so $\log(re^{\ii\theta}) = \log r + \ii\theta$ for $\theta \in (-\pi,\pi)$.
 
 $$
@@ -87,7 +96,7 @@ Because $f$ is holomorphic, the Cauchy–Riemann equations force this critical p
    alt="A saddle point at z=1 in the complex plane, with hyperbolic level curves of Re f, shaded ascent and descent sectors, a vertical steepest-descent path, and the real axis marked as the direction of steepest ascent."
    width="78%" %}
 
-**Step 3: Find the descent contour.**
+**Step 3:**
 We want a contour through $z_c=1$ on which $\Im f$ stays constant (so the integrand doesn't oscillate) and $\Re f$ is maximized at $z_c$ (so Laplace's argument applies once we're on it). Consider the level set $\Im f(z) = \Im f(z_c) = 0$. The positive real ray $(0,\infty)$ trivially lies in it, since $f$ is real there — but we claim it also contains a loop around $0$, which we'll take as our contour.
 
 $\Im f(z) = 0$ is equivalent to $g(z) := (pz + (1 - p))z^{-p} \in (0, \infty)$, a form that's easier to work with. Writing $z = re^{\ii \theta}$,
@@ -132,7 +141,6 @@ which is positive because $\sin\theta$ and $\sin((1-p)\theta)$ always share a si
 
 <!-- *A remark on the branch cut: writing $f = \log(pz+(1-p)) - p\log z$ makes it look like there are two places for something to go wrong, but the actual integrand $(pz+(1-p))^n z^{-(k+1)}$ from Step 1 is single-valued, since $k+1$ is an integer — nothing is really broken. Still, it's worth noticing that $\gamma$ closes exactly at the point $z=-(1-p)/p$ on our cut, and that this is also the zero of $pz+(1-p)$. That's not a coincidence: it's precisely where the singular bookkeeping in $f$ stops mattering, because the true integrand vanishes there.* -->
 
-**Step 4: Show $\Re f$ is maximized at $z_c$.**
 We appeal to a general fact: along a level set of $\Im f$, $\Re f$ is monotonic. Write $f = u + \ii v$ with $z = x+\ii y$. The Cauchy–Riemann equations $u_x = v_y$, $u_y=-v_x$ give $\nabla v = (-u_y, u_x)$, so $\nabla u \cdot \nabla v = 0$ and $\lvert\nabla u\rvert = \lvert\nabla v\rvert = \lvert f'\rvert$. The tangent to a level curve of $v$ is orthogonal to $\nabla v$, hence parallel to $\nabla u$, so along $\gamma$,
 
 $$
@@ -147,7 +155,7 @@ which is nonzero away from the critical point. So $\Re f$ is monotonic on $(-\pi
    alt="A plot of Re f along the descent contour against theta, showing a single hump maximized at theta=0, decaying to negative infinity at plus or minus pi, with a dashed quadratic model overlaid and the local, middle, and edge zones shaded."
    width="95%" %}
 
-**Step 5: Localize and estimate.**
+**Step 4:**
 Write $u(\theta) = f(\gamma(\theta))$. Since $f(1)=0$, $f'(1)=0$, $f''(1) = p(1-p)$, and $\gamma'(0) = (R'(0)+\ii R(0))e^{\ii \cdot 0} = \ii$ (using that $R$ is even since it's a ratio of two odd functions, so $R'(0)=0$), we have $\gamma(\theta) = 1+\ii\theta + O(\theta^2)$ and
 
 $$
@@ -186,6 +194,7 @@ $$
 \end{equation}
 $$
 
+**Step 5:**
 For the tail, uniformly bound the Jacobian $\lvert\gamma'(\theta)\rvert \le M$ (continuous on a compact set), and set $F(n,\theta) = nu(\theta) + (np-k-1)\log R(\theta)$, so
 
 $$
