@@ -8,7 +8,7 @@ description: >-
 # Leave both empty while developing locally.
 # If you publish to <username>.github.io  -> leave both as-is (baseurl: "").
 # If you publish to <username>.github.io/<repo> -> set baseurl: "/<repo>".
-url: ""
+url: "https://oakleafwarrior.github.io"
 baseurl: ""
 
 # --- Profile links (used on the About page + footer) --------------------------
@@ -38,6 +38,7 @@ kramdown:
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 feed:
   path: /feed.xml
