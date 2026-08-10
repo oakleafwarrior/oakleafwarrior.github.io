@@ -92,7 +92,7 @@ Because $f$ is holomorphic, the Cauchy–Riemann equations force this critical p
 
 {% include figure.html
    src="/assets/img/posts/steepest-descent/fig04-clt-saddle.png"
-   caption="The Cauchy–Riemann equations ensure that critical points of any holomorphic function are saddle points. Here $f''(1)=p(1-p)>0$ is real, so near $z_c=1$ one has $\Re(f(z)-f(z_c)) \approx \tfrac{p(1-p)}{2}((x-1)^2-y^2)$. The light grey curves are level curves of $\Re f$; the dashed diagonals are the degenerate level curve $\Re f=\Re f(z_c)$ through the saddle itself. $\Re f$ falls fastest in the imaginary direction and rises fastest in the real one — so to localize near $z_c$, our contour must pass through it vertically. Claude generated picture."
+   caption="The Cauchy–Riemann equations ensure that critical points of any holomorphic function are saddle points. Here $f''(1)=p(1-p)>0$ is real, so near $z_c=1$ one has $\Re(f(z)-f(z_c)) \approx \tfrac{p(1-p)}{2}((x-1)^2-y^2)$. The light grey curves are level curves of $\Re f$; the dashed diagonals are the degenerate level curve $\Re f=\Re f(z_c)$ through the saddle itself. $\Re f$ falls fastest in the imaginary direction and rises fastest in the real one — so to localize near $z_c$, our contour must pass through it vertically. Claude helped generate the tikz."
    alt="A saddle point at z=1 in the complex plane, with hyperbolic level curves of Re f, shaded ascent and descent sectors, a vertical steepest-descent path, and the real axis marked as the direction of steepest ascent."
    width="78%" %}
 
@@ -127,7 +127,7 @@ $R(\theta) > 0$ for all $\theta$, so $\gamma(\theta) = R(\theta)e^{\ii \theta}$ 
 
 {% include figure.html
    src="/assets/img/posts/steepest-descent/fig05-clt-contour.png"
-   caption="The level set $\{\Im f=0\}$ contains, besides the ray $(0,\infty)$, a closed loop $\gamma(\theta)=R(\theta)e^{\ii\theta}$ around the pole at the origin. It passes vertically through the saddle at $z_c=1$, matching the figure above, and closes at $\theta=\pm\pi$, i.e. at $z=-\tfrac{1-p}{p}$: the zero of $pz+(1-p)$, where the true integrand vanishes and $\Re f\to-\infty$, pinching the loop shut. Claude generated picture."
+   caption="The level set $\{\Im f=0\}$ contains, besides the ray $(0,\infty)$, a closed loop $\gamma(\theta)=R(\theta)e^{\ii\theta}$ around the pole at the origin. It passes vertically through the saddle at $z_c=1$, matching the figure above, and closes at $\theta=\pm\pi$, i.e. at $z=-\tfrac{1-p}{p}$: the zero of $pz+(1-p)$, where the true integrand vanishes and $\Re f\to-\infty$, pinching the loop shut. Claude helped generate the tikz."
    alt="Three closed contours in the complex plane through z=1, for p=0.4, p=0.8, and the degenerate p=1/2 case which is exactly the unit circle, each pinched shut on the negative real axis."
    width="78%" %}
 
@@ -151,7 +151,7 @@ which is nonzero away from the critical point. So $\Re f$ is monotonic on $(-\pi
 
 {% include figure.html
    src="/assets/img/posts/steepest-descent/fig06-clt-profile.png"
-   caption="$\Re f$ restricted to the contour above, at $p=0.4$. Because $\Re f$ is monotone along either branch of $\{\Im f=0\}\setminus\{z_c\}$, the profile has a single maximum at $\theta=0$, agreeing with $-\tfrac{p(1-p)}{2}\theta^2$ to third order there, and decaying to $-\infty$ at $\theta=\pm\pi$. The shading is the decomposition used to bound the tail: the localized integral $I_{\mathrm{loc}}$ over $\lvert \theta \rvert<\vep(n)=n^{-2/5}$, a middle zone where $\Re f<-\theta^2/4\cdot p(1-p)$, and an edge zone bounded away from $0$. Claude generated picture."
+   caption="$\Re f$ restricted to the contour above, at $p=0.4$. Because $\Re f$ is monotone along either branch of $\{\Im f=0\}\setminus\{z_c\}$, the profile has a single maximum at $\theta=0$, agreeing with $-\tfrac{p(1-p)}{2}\theta^2$ to third order there, and decaying to $-\infty$ at $\theta=\pm\pi$. The shading is the decomposition used to bound the tail: the localized integral $I_{\mathrm{loc}}$ over $\lvert \theta \rvert<\vep(n)=n^{-2/5}$, a middle zone where $\Re f<-\theta^2/4\cdot p(1-p)$, and an edge zone bounded away from $0$. Claude helped generate the tikz."
    alt="A plot of Re f along the descent contour against theta, showing a single hump maximized at theta=0, decaying to negative infinity at plus or minus pi, with a dashed quadratic model overlaid and the local, middle, and edge zones shaded."
    width="95%" %}
 
