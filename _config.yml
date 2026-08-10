@@ -1,0 +1,67 @@
+# --- Site identity -----------------------------------------------------------
+title: Alex Olhava
+author: Alex Olhava
+email: alex.olhava@gmail.com
+description: >-
+  Personal site of Alex Olhava — research, writing, and notes.
+
+# Leave both empty while developing locally.
+# If you publish to <username>.github.io  -> leave both as-is (baseurl: "").
+# If you publish to <username>.github.io/<repo> -> set baseurl: "/<repo>".
+url: ""
+baseurl: ""
+
+# --- Profile links (used on the About page + footer) --------------------------
+linkedin: "https://www.linkedin.com/in/alex-olhava-065580191/"
+github: "https://github.com/oakleafwarrior"
+# scholar: "https://scholar.google.com/citations?user=XXXX"
+
+# --- Top bar ------------------------------------------------------------------
+# Poetry is deliberately NOT listed here — it is reachable only from the About page.
+nav:
+  - title: About
+    url: /
+  - title: Research
+    url: /research/
+  - title: Blog
+    url: /blog/
+
+# --- Build --------------------------------------------------------------------
+permalink: /posts/:year/:month/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false        # keep hard-wrapped source paragraphs from becoming <br>
+  math_engine: null       # emit raw $$...$$ so MathJax (client-side) handles it
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: /feed.xml
+
+# Every post gets the post layout and MathJax; every other page gets `page`.
+# Set `math: false` in a post's front matter to skip loading MathJax there.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      math: true
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - WRITING.md
+  - website_doc.txt
+  - materials/          # raw source material — not part of the published site
+  - vendor/
+  - .jekyll-cache/

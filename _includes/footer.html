@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <span>{{ site.author }}</span>
+  {%- if site.github and site.github contains "://" %}
+  <span>·</span>
+  <a href="{{ site.github }}">GitHub</a>
+  {%- endif %}
+  <span>·</span>
+  <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+</footer>

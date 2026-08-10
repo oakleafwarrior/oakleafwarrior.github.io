@@ -1,0 +1,235 @@
+/* ---------------------------------------------------------------------------
+   Everything visual lives in this one file. Tweak the variables below first —
+   most of the site's look is downstream of them.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --measure: 52rem;          /* text column width — raise it for narrower page margins */
+  --photo: 300px;            /* profile picture width on the About page */
+  --fg: #1a1a1a;
+  --bg: #ffffff;
+  --muted: #666666;
+  --link: #14507d;
+  --rule: #e0e0e0;
+  --code-bg: #f5f5f3;
+  --font-body: "Palatino Linotype", Palatino, "Iowan Old Style", Georgia, serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e4e2dd;
+    --bg: #16181a;
+    --muted: #9a9a95;
+    --link: #7fb2d8;
+    --rule: #33373a;
+    --code-bg: #202325;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 2.5rem 1.25rem 4rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.content, .site-header, .site-footer { max-width: var(--measure); margin: 0 auto; }
+
+/* --- header / nav ---------------------------------------------------------- */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 0.6rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.site-nav { font-family: var(--font-ui); font-size: 0.9rem; }
+.site-nav a { margin-left: 1.1rem; }
+.site-nav a:first-child { margin-left: 0; }
+.site-nav a.current { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--muted); }
+
+/* --- typography ------------------------------------------------------------ */
+
+a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+h1, h2, h3, h4 { line-height: 1.25; font-weight: 600; }
+h1 { font-size: 1.7rem; margin: 0 0 1.2rem; }
+h2 { font-size: 1.3rem; margin: 2.2rem 0 0.7rem; }
+h3 { font-size: 1.1rem; margin: 1.8rem 0 0.5rem; }
+
+p, ul, ol { margin: 0 0 1.1rem; }
+ul, ol { padding-left: 1.4rem; }
+li { margin-bottom: 0.3rem; }
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+blockquote {
+  margin: 1.2rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--rule);
+  color: var(--muted);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--code-bg);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--code-bg);
+  padding: 0.9rem 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+pre code { background: none; padding: 0; font-size: inherit; }
+
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; margin-bottom: 1.2rem; display: block; overflow-x: auto; }
+th, td { text-align: left; padding: 0.4rem 0.7rem 0.4rem 0; border-bottom: 1px solid var(--rule); }
+
+.muted, .post-meta { color: var(--muted); font-family: var(--font-ui); font-size: 0.85rem; }
+
+/* --- about page ------------------------------------------------------------ */
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  align-items: flex-start;
+  margin-bottom: 2.2rem;
+}
+.profile img {
+  width: var(--photo);
+  height: auto;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* the column beside the photo: name, intro, links, research interests */
+.profile .intro { flex: 1 1 17rem; margin: 0; }
+.profile .intro > :first-child { margin-top: 0; }
+.profile .intro > :last-child { margin-bottom: 0; }
+.profile .intro h1 { margin-bottom: 0.4rem; }
+.profile .intro h2 { margin-top: 1.5rem; }
+
+@media (max-width: 34rem) {
+  .profile img { width: 60%; }        /* stacked layout — don't let it dominate */
+}
+
+.links { font-family: var(--font-ui); font-size: 0.95rem; list-style: none; padding: 0; margin: 0 0 1rem; }
+.links li { margin-bottom: 0.3rem; }
+.links .label { display: inline-block; min-width: 6.5rem; color: var(--muted); }
+
+/* --- friends: multi-column list ------------------------------------------- */
+
+.friends ul {
+  columns: 2;
+  column-gap: 2rem;
+  padding-left: 1.4rem;
+  margin: 0;
+}
+.friends li { break-inside: avoid; }
+
+@media (max-width: 30rem) {
+  .friends ul { columns: 1; }
+}
+
+/* --- post list ------------------------------------------------------------- */
+
+.post-list { list-style: none; padding: 0; }
+.post-list li { margin-bottom: 1.4rem; }
+.post-list .title { font-size: 1.05rem; }
+.post-list .summary { display: block; color: var(--muted); font-size: 0.95rem; }
+
+/* --- posts: figures, abstract, math ---------------------------------------- */
+
+.abstract {
+  font-size: 0.95rem;
+  border-left: 2px solid var(--rule);
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.abstract p:last-child { margin-bottom: 0; }
+
+.figure { margin: 2rem 0; text-align: center; }
+.figure img, .post img { max-width: 100%; height: auto; border-radius: 2px; }
+.figure figcaption, .post p > img + em {
+  display: block;
+  margin-top: 0.6rem;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--muted);
+  text-align: left;
+}
+@media (prefers-color-scheme: dark) {
+  /* most plots are exported on white — keep them readable on a dark page */
+  .figure img, .post img { background: #fff; padding: 0.4rem; }
+}
+
+/* long display equations scroll instead of widening the page */
+mjx-container[jax="CHTML"][display="true"] { overflow-x: auto; overflow-y: hidden; padding: 0.2rem 0; }
+
+.footnotes { font-size: 0.9rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 1rem; }
+
+.back { font-family: var(--font-ui); font-size: 0.9rem; margin-top: 3rem; }
+
+/* --- poetry ---------------------------------------------------------------- */
+
+.poem {
+  white-space: pre-wrap;       /* line breaks in the source are line breaks on the page */
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+.poem-title { font-size: 1.1rem; margin: 0 0 0.1rem; }
+.poem-meta { color: var(--muted); font-family: var(--font-ui); font-size: 0.8rem; margin: 0 0 0.75rem; }
+
+.poem-entry { margin: 2.2rem 0; }
+
+/* With JS on, exactly one poem is shown; with it off, all of them are. */
+.js .poem-entry { display: none; }
+.js .poem-entry.is-shown { display: block; }
+
+.poem-nav { font-family: var(--font-ui); font-size: 0.85rem; margin-top: 2.5rem; }
+.poem-nav[hidden] { display: none; }
+
+/* --- footer ---------------------------------------------------------------- */
+
+.site-footer {
+  margin-top: 4rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.site-footer a { color: var(--muted); }
+.site-footer span { margin-right: 0.35rem; }

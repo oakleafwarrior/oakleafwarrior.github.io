@@ -1,0 +1,19 @@
+{%- comment -%}
+Usage in a post:
+
+  {% include figure.html
+     src="/assets/img/posts/my-post/fig01.png"
+     caption="What the figure shows. Inline math like $\lambda_1$ works here."
+     alt="Short description for screen readers"
+     width="70%" %}
+
+Only `src` is required.
+{%- endcomment -%}
+<figure class="figure"{% if include.id %} id="{{ include.id }}"{% endif %}>
+  <img src="{{ include.src | relative_url }}"
+       alt="{{ include.alt | default: include.caption | strip_html | truncate: 180 }}"
+       {%- if include.width %} style="width: {{ include.width }};"{% endif %}>
+  {%- if include.caption %}
+  <figcaption>{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
+  {%- endif %}
+</figure>

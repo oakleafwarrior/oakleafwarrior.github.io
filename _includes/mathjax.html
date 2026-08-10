@@ -1,0 +1,32 @@
+<script>
+  // Inline math: $...$ or \(...\)   Display math: $$...$$ or \[...\]
+  // Add reusable shorthands under `macros` below, e.g. \R for \mathbb{R}.
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      tags: 'ams',                       // \label{} + \eqref{} numbering
+      macros: {
+        R: '\\mathbb{R}',
+        N: '\\mathbb{N}',
+        E: '\\mathbb{E}',
+        KL: '\\mathrm{KL}',
+        RR: '\\mathbb{R}',
+        CC: '\\mathbb{C}',
+        ZZ: '\\mathbb{Z}',
+        lp: '\\left(',
+        rp: '\\right)',
+        lb: '\\left[',
+        rb: '\\right]',
+        vep: '\\varepsilon',
+        ii: '\\mathrm{i}',
+        oiint: '\\unicode{x222F}'
+      }
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
