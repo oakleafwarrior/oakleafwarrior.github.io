@@ -4,7 +4,7 @@ title: "Steepest Descent I: Laplace's Method and Stirling's Formula"
 tags: [math, random matrix theory]
 math: true
 abstract: >
-  A short note on the method of steepest descent for asymptotic evaluation of integrals.
+  A short note on the method of steepest descent for asymptotic evaluation of integrals. Inspired by Vadim Gorin's introduction to the steepest descent method in his course on random matrix theory.
 ---
 
 ## Introduction

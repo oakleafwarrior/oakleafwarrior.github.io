@@ -3,7 +3,7 @@ title: "Steepest Descent II: The Local Central Limit Theorem"
 tags: [math, random matrix theory]
 math: true
 abstract: >
-  The second in a series on the method of steepest descent: we move from Laplace's method on R to a genuine contour integral in C, choosing and justifying a descent contour by hand, and prove the local central limit theorem for the binomial distribution.
+  The second in a series on the method of steepest descent: we move from Laplace's method on $\mathbb{R}$ to a contour integral in $\mathbb{C}$ and prove the local central limit theorem for the binomial distribution.
 ---
 
 ## Introduction
