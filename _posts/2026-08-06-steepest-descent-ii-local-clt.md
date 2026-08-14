@@ -97,7 +97,7 @@ Because $f$ is holomorphic, the Cauchy–Riemann equations force this critical p
    width="78%" %}
 
 **Step 3:**
-We want a contour through $z_c=1$ on which $\Im f$ stays constant (so the integrand doesn't oscillate) and $\Re f$ is maximized at $z_c$ (so Laplace's argument applies once we're on it). Consider the level set $\Im f(z) = \Im f(z_c) = 0$. The positive real ray $(0,\infty)$ trivially lies in it, since $f$ is real there — but we claim it also contains a loop around $0$, which we'll take as our contour.
+We want a contour through $z_c=1$ on which $\Im f$ stays constant (so the integrand doesn't oscillate) and $\Re f$ is maximized at $z_c$ (so Laplace's argument applies once we're on it). Consider the level set $\Im f(z) = \Im f(z_c) = 0$. The positive real ray $(0,\infty)$ trivially lies in it, since $f$ is real there, but we claim it also contains a loop around $0$, which we'll take as our contour.
 
 $\Im f(z) = 0$ is equivalent to $g(z) := (pz + (1 - p))z^{-p} \in (0, \infty)$, a form that's easier to work with. Writing $z = re^{\ii \theta}$,
 
@@ -117,13 +117,13 @@ $$
 pr\sin((1-p)\theta) = (1-p)\sin(p\theta).
 $$
 
-At $\theta=0$ both sides vanish trivially — that's the ray we already found. For $\theta\ne 0$: since $\theta \in (-\pi,\pi)$ forces $(1-p)\theta \in (-\pi,\pi)$ too, $\sin((1-p)\theta) \ne 0$, so we can solve for $r$:
+At $\theta=0$ both sides vanish trivially which is the ray we already found. For $\theta \ne 0$: since $\theta \in (-\pi,\pi)$ forces $(1-p)\theta \in (-\pi,\pi)$ too, $\sin((1-p)\theta) \ne 0$, so we can solve for $r$:
 
 $$
 R(\theta) = \frac{(1 - p) \sin(p \theta)}{p\sin((1-p)\theta)}.
 $$
 
-$R(\theta) > 0$ for all $\theta$, so $\gamma(\theta) = R(\theta)e^{\ii \theta}$ is injective and winds once around $0$ — and $R(0)=1$ (by L'Hôpital), so $\gamma$ passes through $z_c$ exactly as required. The figure below draws $\gamma$ for a few values of $p$.
+$R(\theta) > 0$ for all $\theta$, so $\gamma(\theta) = R(\theta)e^{\ii \theta}$ is injective and winds once around $0$, and $R(0)=1$ (by L'Hôpital), so $\gamma$ passes through $z_c$ exactly as required. The figure below draws $\gamma$ for a few values of $p$.
 
 {% include figure.html
    src="/assets/img/posts/steepest-descent/fig05-clt-contour.png"
