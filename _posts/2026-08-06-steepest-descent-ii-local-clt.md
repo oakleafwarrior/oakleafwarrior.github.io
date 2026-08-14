@@ -41,7 +41,7 @@ $$
 \end{equation}
 $$
 
-This theorem predates the more familiar Central Limit Theorem — De Moivre proved it for $p=1/2$, and Laplace in general. It says something sharper than the CLT: not just that a properly-normalized binomial random variable converges in *distribution* to a Gaussian, but that its individual point masses converge to the values of the Gaussian *density* itself, at scale $n^{-1/2}$. Hence "local."
+This theorem predates the more familiar Central Limit Theorem — De Moivre proved it for $p=1/2$, and Laplace in general. It says something sharper than the CLT: not just that a properly-normalized binomial random variable converges in distribution to a Gaussian, but that its individual point masses converge to the values of the Gaussian density itself, at scale $n^{-1/2}$. Hence "local."
 
 **Proof.**
 
@@ -70,7 +70,7 @@ $$
 where $f(z) = \log(pz + (1 - p)) - p \log(z)$. We'll treat $z^{np-k-1}$ separately — its exponent grows only like $O(\sqrt{n})$, far slower than the $nf(z)$ term that will dominate everything.
 
 **Step 2:**
-As with Laplace's method, we want to localize near a critical point of $f$. But we're now integrating over a closed contour in $\CC$ rather than an interval in $\RR$, so we also have to *choose* that contour, and worry about the geometry and oscillation of the integrand along it. We first fix a branch of $\log$: cut along the negative real axis, so $\log(re^{\ii\theta}) = \log r + \ii\theta$ for $\theta \in (-\pi,\pi)$.
+As with Laplace's method, we want to localize near a critical point of $f$. But we're now integrating over a closed contour in $\CC$ rather than an interval in $\RR$, so we also have to choose that contour, and worry about the geometry and oscillation of the integrand along it. We first fix a branch of $\log$: cut along the negative real axis, so $\log(re^{\ii\theta}) = \log r + \ii\theta$ for $\theta \in (-\pi,\pi)$.
 
 $$
 f'(z) = \frac{p}{pz + (1 - p)} - \frac{p}{z},
@@ -88,7 +88,7 @@ $$
 f(z) = \frac{p(1 - p)}{2} (z-1)^2 + O\lp (z-1)^3 \rp.
 $$
 
-Because $f$ is holomorphic, the Cauchy–Riemann equations force this critical point to be a **saddle**: $f''(z_c)$ is real and positive, so $\Re f$ falls off in the imaginary direction and rises in the real direction near $z_c$. The figure below shows the local picture.
+Because $f$ is holomorphic, the Cauchy–Riemann equations force this critical point to be a saddle: $f''(z_c)$ is real and positive, so $\Re f$ falls off in the imaginary direction and rises in the real direction near $z_c$. The figure below shows the local picture.
 
 {% include figure.html
    src="/assets/img/posts/steepest-descent/fig04-clt-saddle.png"
