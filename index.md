@@ -50,6 +50,7 @@ Occasionally I write [poetry]({{ '/poetry/' | relative_url }}) which I may infre
 - [Alice Cannon](https://sites.google.com/brown.edu/alicecannon/home)
 - [Jingyuan Chen](https://jingyuanchenxyz.github.io/)
 - [Jad Damaj](https://math.berkeley.edu/~jdamaj/)
+- [Vadim Gorin](https://www.stat.berkeley.edu/~vadicgor/)
 - [Yuhan Jiang](https://math.berkeley.edu/~jyh/)
 - [Serkan Salik](https://serkansalik.github.io/)
 - [Julie Shields](https://juliptic.github.io)
