@@ -8,7 +8,7 @@ abstract: >
 
 ## Introduction
 
-In [Steepest Descent I]({% post_url 2026-08-04-steepest-descent-i-laplace-stirling %}) we introduced Laplace's method (the real integral version) and used it to prove Stirling's formula. There, all we needed to do was localize near the maximum of $f$. In this post, we do proper steepest descent, which becomes significantly more complicated as you have to choose a contour.
+In [Steepest Descent I]({% post_url 2026-08-04-steepest-descent-i-laplace-stirling %}) we introduced Laplace's method (the real integral version) and used it to prove Stirling's formula. There, all we needed to do was localize near the maximum of $f$. In this post, we do proper steepest descent, which becomes significantly more complicated as you have to choose a contour. This was the second example in Vadim Gorin's course, but treated with substantially more rigor.
 
 The general formula in $\CC$ we wrote down but didn't yet need is
 
