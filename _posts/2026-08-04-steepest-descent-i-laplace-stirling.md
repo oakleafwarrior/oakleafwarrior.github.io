@@ -14,7 +14,8 @@ Often the integrals are quite formidable, so in this note we will walk through h
 This will be the first of a series of posts on using the method of steepest descent.
 In this series, we will go through a few examples increasing in difficulty, starting with integrals on $\RR$ to double contour integrals on $\CC^2$. 
 We will build up to a result on the correlation structure of the largest eigenvalues as $N \to \infty$.
-It is quite a fun way of computing integrals and I hope to showcase that.
+It is quite a fun way of computing integrals and I hope to showcase that. 
+The exposition of steepest descent here follows how Vadim Gorin introduced it in his courses on Random Matrix Theory and Integrable Probability.
 
 This post covers Laplace's method, the $\RR$ analog of steepest descent, and we prove Stirling's approximation.
 
