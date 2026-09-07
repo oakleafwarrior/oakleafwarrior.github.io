@@ -65,31 +65,46 @@ So enjoy those final minutes
 </div>
 </article>
 
-<!-- <article class="poem-entry">
+<article class="poem-entry">
+<h2 class="poem-title">Artifacts</h2>
+<p class="poem-meta">2026</p>
+<div class="poem">
+Walking through a museum you see
+messages and visions all now
+frozen in artifacts, now alone.
+What matters how you got there for
+every train bus and car somehow
+are the same. Each afixed with a window.
+And when illuminated, your reflection
+looks back from the dark.
+</div>
+</article>
+
+<article class="poem-entry">
 <h2 class="poem-title">Lost in Translation</h2>
 <p class="poem-meta">2026</p>
 <div class="poem">
 It was lost in translation
-Between the flips of the page.
+between the flips of the page.
 Words tossed in the air
-Among dancers cross stage.
+among dancers cross stage.
 
 I sat hunched over a dictionary
-Texts, translations, pen in hand
+texts, translations, pen in hand.
 The music always stops
-Mournful looks from the band
+mournful looks from the band
 
 Many frozen messages
-Between present and past
+between present and past.
 On my paper a muted melody
 diminished a voice at last
 
 I may finally understand
-But now it's far too late
+but now it's far too late.
 Any long winded reply
-Will forever have to wait
+will forever have to wait
 </div>
-</article> -->
+</article>
 
 <p class="poem-nav" hidden><a href="#" id="another-poem">another poem</a></p>
 
